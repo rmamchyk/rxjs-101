@@ -1,7 +1,1 @@
-import './'
-
-document.addEventListener('DOMContentLoaded', function() {
-    
-    document.getElementById('title').innerHTML = "";
-     
-});
+import './http/4-errors'

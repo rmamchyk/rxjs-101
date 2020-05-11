@@ -3,7 +3,7 @@ import { take, map, scan, takeWhile, switchMap } from "rxjs/operators";
 import {ajax} from "rxjs/ajax";
 
 
-export const sampleData = ajax.getJSON('https://jsonplaceholder.typicode.com/users')
+export const sampleData$ = ajax.getJSON('https://jsonplaceholder.typicode.com/users')
 .pipe(
     switchMap(
         (results)=>{
@@ -12,7 +12,11 @@ export const sampleData = ajax.getJSON('https://jsonplaceholder.typicode.com/use
     )
 )
 
-
+export const title = (title) => {
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('title').innerHTML = title || '';
+  });
+}
 
 export const add = {
   li: printLi,

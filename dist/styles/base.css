@@ -1,3 +1,7 @@
+html {
+  font-family: 'Roboto';
+}
+
 #display{
     color: #333;
     font-family: sans-serif;
